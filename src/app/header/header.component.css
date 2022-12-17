@@ -1,0 +1,22 @@
+nav a{
+    color: aliceblue;
+}
+nav a:hover{
+    color: rgb(136, 222, 136);
+}
+
+.img img{
+    height: 70px;
+    padding: 10px;
+}
+
+.img{
+    background-color: black;
+    color: aliceblue;
+}
+nav{
+    position: sticky;
+    top: 0;
+}
+
+

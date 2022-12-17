@@ -1,0 +1,104 @@
+<!-- <p>gallery works!</p> -->
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    .container{
+        height: 500px;
+    }
+div.gallery {
+  margin: 12px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+  height: 320px;
+  background-color: pink;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+ 
+  height: 250px;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+@media screen and (max-width:1400px){
+  .container{
+    height: 800px;
+  }
+}
+
+@media screen and (max-width:768px){
+  .container{
+    height: 1100px;
+  }
+}
+
+@media screen and (max-width:503px){
+  .container{
+    height: 2120px;
+    float: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+<body class="bg-dark">
+<div class="container bg-dark my-4 p-5">
+<div class="gallery">
+  <a routerLink="/blackhole">
+    <img src="assets/images/b.jpg" alt="Cinque Terre" width="600" height="400">
+  </a>
+  <div class="desc">Blackhole</div>
+</div>
+
+<div class="gallery">
+  <a routerLink="/tezas">
+    <img src="assets/images/texas.jpg" alt="Forest" width="600" height="400">
+  </a>
+  <div class="desc">Tezas</div>
+</div>
+
+<div class="gallery">
+  <a routerLink="/gillu">
+    <img src="assets/images/g1.jpg" alt="Northern Lights" width="600" height="400">
+  </a>
+  <div class="desc">Gillu</div>
+</div>
+
+<div class="gallery">
+  <a routerLink="/rk">
+    <img src="assets/images/dbl1.jpg" alt="Mountains" width="600" height="400">
+  </a>
+  <div class="desc">Rahsaymayi Kahaniyan</div>
+</div>
+
+<div class="gallery">
+    <a routerLink="/nck">
+      <img src="assets/images/nkv.jpg" alt="Mountains" width="600" height="400">
+    </a>
+    <div class="desc">N Chitra Katha</div>
+  </div>
+
+  <div class="gallery">
+    <a routerLink="/npb">
+      <img src="assets/images/mbc.jpg" alt="Mountains" width="600" height="400">
+    </a>
+    <div class="desc">N Pocket Books</div>
+  </div>
+
+</div>
+</body>
+</html>
+
+<router-outlet></router-outlet>

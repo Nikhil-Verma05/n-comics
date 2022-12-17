@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackhole Comics</title>
+    <style>
+        .container{
+            width: 100%;
+            height: 540px;
+            justify-content: center;
+            
+        }
+        .container img{
+            width: 100%;
+            height: 520px;
+            padding: 10px;
+        }
+
+        @media screen and (max-width:1500px) {
+                .container{
+                    /* flex-direction: column; */
+                    width: 80%;
+                    height: 440px;
+                }
+                .container img{
+                    width: 100%;
+                    height: 400px;
+                    flex-wrap: wrap;
+                }
+        }
+
+        @media screen and (max-width:776px) {
+                .container{
+                    flex-direction: column;
+                    width: 60%;
+                    height: 860px;
+                    text-align: center;
+                }
+                .container img{
+                    width: 100%;
+                    height: 230px;
+                    /* flex-direction: column; */
+                }
+        }
+
+        @media screen and (max-width:450px) {
+                .container{
+                    flex-direction: column;
+                    width: 70%;
+                    height: 540px;
+                    text-align: center;
+                }
+                .container img{
+                    width: 100%;
+                    height: 100px;
+                    /* flex-direction: column; */
+                }
+        }
+    </style>
+</head>
+<body>
+    <div class="container d-flex my-4">
+        <a class="text-center" href="assets/images/b1.pdf" target="_blank"><img src="assets/images/bc.jpg" alt=""><u> Blackhole</u></a>
+        <a class="text-center" href="assets/images/bvb2.pdf" target="_blank"><img src="assets/images/bvbc.jpg" alt=""><u> Blackhole Vs Blackhole</u></a>
+        <a class="text-center" href="assets/images/dvb3.pdf" target="_blank"><img src="assets/images/dvc.jpg" alt=""><u> Doctor Virtual</u></a>
+        <a class="text-center" href="assets/images/ib4.pdf" target="_blank"><img src="assets/images/ibc.jpg" alt=""><u> Infected</u></a>
+        
+    </div>
+</body>
+</html>

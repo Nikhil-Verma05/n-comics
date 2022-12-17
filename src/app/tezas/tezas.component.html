@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackhole Comics</title>
+    <style>
+        .container{
+            width: 100%;
+            height: 540px;
+            justify-content: center;
+            
+        }
+        .container img{
+            width: 100%;
+            height: 520px;
+            padding: 10px;
+        }
+
+        @media screen and (max-width:1500px) {
+                .container{
+                    /* flex-direction: column; */
+                    width: 80%;
+                    height: 440px;
+                }
+                .container img{
+                    width: 100%;
+                    height: 400px;
+                    flex-wrap: wrap;
+                }
+        }
+
+        @media screen and (max-width:776px) {
+                .container{
+                    flex-direction: column;
+                    width: 60%;
+                    height: 610px;
+                    text-align: center;
+                }
+                .container img{
+                    width: 100%;
+                    height: 330px;
+                    /* flex-direction: column; */
+                }
+        }
+
+        @media screen and (max-width:450px) {
+                .container{
+                    flex-direction: column;
+                    width: 70%;
+                    height: 340px;
+                    text-align: center;
+                }
+                .container img{
+                    width: 100%;
+                    height: 150px;
+                    /* flex-direction: column; */
+                }
+        }
+    </style>
+</head>
+<body>
+    <div class="container d-flex my-4">
+        <a class="text-center" href="assets/images/sht1.pdf" target="_blank"><img src="assets/images/stc.jpg" alt=""><u> Superhero Tezas</u></a>
+        <a class="text-center" href="assets/images/ut2.pdf" target="_blank"><img src="assets/images/ufoc.jpg" alt=""><u> UFO </u></a>
+      
+        
+    </div>
+</body>
+</html>
+

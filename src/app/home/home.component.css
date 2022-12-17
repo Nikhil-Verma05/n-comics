@@ -1,0 +1,53 @@
+.img1 img{
+    width: 100%;
+    height: 600px;
+}
+
+.box{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(60, 59, 59);
+    height: 620px;
+    
+}
+
+.img3 img{
+    height: 500px;
+}
+
+.img3 a{
+    position: absolute;
+    text-decoration: none;
+    color: aliceblue;
+    left: 650px;
+    top: 650px;
+    font-size: 50px;
+
+}
+.img3 a:hover{
+    color: rgb(132, 218, 132);
+    transition: .5s;
+}
+
+@media screen and (max-width:1280px) {
+    .box{
+        flex-direction: column;
+        align-items: center;
+        height: 3220px;
+    }
+
+     .img3 a{
+       left: 260px;
+       top: 1983px;
+       font-size: 32px;
+       text-align: center;
+    }
+}
+
+@media screen and (max-width:647px) {
+    .img3 a{
+        left: 130px;
+        top: 1983px;
+        font: 21px;
+     }
+}

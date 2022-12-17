@@ -1,0 +1,103 @@
+<!-- <p>contact works!</p> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;
+color: white;
+background-image: url('assets/images/31.jpg');
+background-size: cover;}
+* {box-sizing: border-box;}
+
+h3{
+    text-align: center;
+    color:rgb(68, 232, 68);
+    font-size: 40px;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=text]:hover, select:hover, textarea:hover{
+    box-shadow: 2px 8px 12px rgb(239, 242, 238);
+
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #1d1a1a;
+  padding: 20px;
+  width: 60%;
+  
+}
+
+.error{
+    color: red;
+    font-size: 10px;
+}
+</style>
+</head>
+<body>
+
+<h3>Contact Form</h3>
+
+<div class="container">
+  <!-- {{firstname}} -->
+  <!-- {{contactform.invalid}} -->
+  <form action="" (ngSubmit)="submitForm()" #contactForm="ngForm">
+    <!--  ngsubmit use for form submit -->
+    <!--  #contactForm="ngForm" yeh humne form validtion karne ke liye diya hai. -->
+    <!-- {{contactForm.valid}} -->
+    <!-- yeh humain true false bata hai.true hua to form valid and nahi hua to form not valid. -->
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name.." [(ngModel)]="firstname" #nameInput="ngModel" required>
+    <div class="error" *ngIf="nameInput.invalid && nameInput.touched">Your firstname is required.</div>
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name.."  [(ngModel)]="lastname"  #nameInput="ngModel" required>
+    <div class="error" *ngIf="nameInput.invalid && nameInput.touched">Your lastname is required.</div>
+
+    <label for="country">Country</label>
+    <select id="country" name="country" [(ngModel)]="country" required>
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" [(ngModel)]="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit" [disabled]="contactForm.invalid">
+    <!-- <button type="submit">Submit</button> -->
+  </form>
+</div>
+  
+</body>
+</html>
+
+
